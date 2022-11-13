@@ -1,0 +1,511 @@
+{
+    "annotations": {
+        "list": [
+            {
+                "builtIn": 1,
+                "datasource": {
+                    "type": "grafana",
+                    "uid": "-- Grafana --"
+                },
+                "enable": true,
+                "hide": true,
+                "iconColor": "rgba(0, 211, 255, 1)",
+                "name": "Annotations & Alerts",
+                "target": {
+                    "limit": 100,
+                    "matchAny": false,
+                    "tags": [],
+                    "type": "dashboard"
+                },
+                "type": "dashboard"
+            }
+        ]
+    },
+    "description": "",
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 3,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+        {
+            "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "P2D2EEF3E092AF52B"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            }
+                        ]
+                    },
+                    "unit": "kwatth"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 6,
+                "x": 0,
+                "y": 0
+            },
+            "id": 2,
+            "options": {
+                "colorMode": "value",
+                "graphMode": "area",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "textMode": "auto"
+            },
+            "pluginVersion": "9.2.4",
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "frser-sqlite-datasource",
+                        "uid": "P2D2EEF3E092AF52B"
+                    },
+                    "queryText": "select sum(kilowatthour) from kwh",
+                    "queryType": "table",
+                    "rawQueryText": "select sum(kilowatthour) from kwh",
+                    "refId": "A",
+                    "timeColumns": [
+                        "timestamp"
+                    ]
+                }
+            ],
+            "title": "Total",
+            "type": "stat"
+        },
+        {
+            "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "P2D2EEF3E092AF52B"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            }
+                        ]
+                    },
+                    "unit": "kwatth"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 6,
+                "x": 6,
+                "y": 0
+            },
+            "id": 6,
+            "options": {
+                "colorMode": "value",
+                "graphMode": "area",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "textMode": "auto"
+            },
+            "pluginVersion": "9.2.4",
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "frser-sqlite-datasource",
+                        "uid": "P2D2EEF3E092AF52B"
+                    },
+                    "queryText": "select max(kilowatthour) from kwh",
+                    "queryType": "table",
+                    "rawQueryText": "select max(kilowatthour) from kwh",
+                    "refId": "A",
+                    "timeColumns": [
+                        "time",
+                        "ts"
+                    ]
+                }
+            ],
+            "title": "Day Average",
+            "type": "stat"
+        },
+        {
+            "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "P2D2EEF3E092AF52B"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            }
+                        ]
+                    },
+                    "unit": "kwatth"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 6,
+                "x": 12,
+                "y": 0
+            },
+            "id": 10,
+            "options": {
+                "colorMode": "value",
+                "graphMode": "area",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "textMode": "auto"
+            },
+            "pluginVersion": "9.2.4",
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "frser-sqlite-datasource",
+                        "uid": "P2D2EEF3E092AF52B"
+                    },
+                    "queryText": "SELECT avg(kilowatthour) from kwh",
+                    "queryType": "table",
+                    "rawQueryText": "SELECT avg(kilowatthour) from kwh",
+                    "refId": "A",
+                    "timeColumns": [
+                        "time",
+                        "ts"
+                    ]
+                }
+            ],
+            "title": "Daily Average",
+            "type": "stat"
+        },
+        {
+            "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "P2D2EEF3E092AF52B"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            }
+                        ]
+                    },
+                    "unit": "kwatth"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 6,
+                "x": 18,
+                "y": 0
+            },
+            "id": 12,
+            "options": {
+                "colorMode": "value",
+                "graphMode": "area",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "textMode": "auto"
+            },
+            "pluginVersion": "9.2.4",
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "frser-sqlite-datasource",
+                        "uid": "P2D2EEF3E092AF52B"
+                    },
+                    "queryText": "SELECT avg(monthlykwh) from (\n  SELECT\n  $__unixEpochGroupSeconds(\"timestamp\", 2592000) as time,\n  sum(kilowatthour) as monthlykwh\n  FROM kwh\n  GROUP BY time\n  ORDER BY time\n)",
+                    "queryType": "table",
+                    "rawQueryText": "SELECT avg(monthlykwh) from (\n  SELECT\n  $__unixEpochGroupSeconds(\"timestamp\", 2592000) as time,\n  sum(kilowatthour) as monthlykwh\n  FROM kwh\n  GROUP BY time\n  ORDER BY time\n)",
+                    "refId": "A",
+                    "timeColumns": [
+                        "time",
+                        "ts",
+                        "timestamp"
+                    ]
+                }
+            ],
+            "title": "30 Day Average",
+            "type": "stat"
+        },
+        {
+            "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "P2D2EEF3E092AF52B"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "palette-classic"
+                    },
+                    "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
+                        "axisLabel": "",
+                        "axisPlacement": "auto",
+                        "barAlignment": 1,
+                        "drawStyle": "bars",
+                        "fillOpacity": 76,
+                        "gradientMode": "hue",
+                        "hideFrom": {
+                            "legend": false,
+                            "tooltip": false,
+                            "viz": false
+                        },
+                        "lineInterpolation": "linear",
+                        "lineWidth": 1,
+                        "pointSize": 5,
+                        "scaleDistribution": {
+                            "type": "linear"
+                        },
+                        "showPoints": "auto",
+                        "spanNulls": false,
+                        "stacking": {
+                            "group": "A",
+                            "mode": "none"
+                        },
+                        "thresholdsStyle": {
+                            "mode": "off"
+                        }
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "kwatt"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 11,
+                "w": 24,
+                "x": 0,
+                "y": 8
+            },
+            "id": 4,
+            "options": {
+                "legend": {
+                    "calcs": [
+                        "max",
+                        "min",
+                        "mean",
+                        "stdDev"
+                    ],
+                    "displayMode": "list",
+                    "placement": "bottom",
+                    "showLegend": true
+                },
+                "tooltip": {
+                    "mode": "single",
+                    "sort": "none"
+                }
+            },
+            "pluginVersion": "9.1.1",
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "frser-sqlite-datasource",
+                        "uid": "P2D2EEF3E092AF52B"
+                    },
+                    "queryText": "SELECT\n  timestamp,\n  sum(kilowatthour) as Daily\n  FROM kwh\n  GROUP BY timestamp\n  ORDER BY timestamp\n",
+                    "queryType": "time series",
+                    "rawQueryText": "SELECT\n  timestamp,\n  sum(kilowatthour) as Daily\n  FROM kwh\n  GROUP BY timestamp\n  ORDER BY timestamp\n",
+                    "refId": "A",
+                    "timeColumns": [
+                        "time",
+                        "timestamp"
+                    ]
+                }
+            ],
+            "title": "Daily Power (KWh)",
+            "type": "timeseries"
+        },
+        {
+            "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "P2D2EEF3E092AF52B"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "palette-classic"
+                    },
+                    "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
+                        "axisLabel": "",
+                        "axisPlacement": "auto",
+                        "barAlignment": 0,
+                        "drawStyle": "line",
+                        "fillOpacity": 0,
+                        "gradientMode": "none",
+                        "hideFrom": {
+                            "legend": false,
+                            "tooltip": false,
+                            "viz": false
+                        },
+                        "lineInterpolation": "smooth",
+                        "lineWidth": 1,
+                        "pointSize": 5,
+                        "scaleDistribution": {
+                            "type": "linear"
+                        },
+                        "showPoints": "auto",
+                        "spanNulls": false,
+                        "stacking": {
+                            "group": "A",
+                            "mode": "none"
+                        },
+                        "thresholdsStyle": {
+                            "mode": "off"
+                        }
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    }
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 14,
+                "w": 24,
+                "x": 0,
+                "y": 19
+            },
+            "id": 11,
+            "options": {
+                "legend": {
+                    "calcs": [
+                        "min",
+                        "max",
+                        "mean",
+                        "stdDev"
+                    ],
+                    "displayMode": "list",
+                    "placement": "bottom",
+                    "showLegend": true
+                },
+                "tooltip": {
+                    "mode": "single",
+                    "sort": "none"
+                }
+            },
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "frser-sqlite-datasource",
+                        "uid": "P2D2EEF3E092AF52B"
+                    },
+                    "queryText": "SELECT\n  $__unixEpochGroupSeconds(\"timestamp\", 3600) as time,\n  sum(watt) as DailyWatts\n  FROM pac\n  GROUP BY time\n  ORDER BY time",
+                    "queryType": "table",
+                    "rawQueryText": "SELECT\n  $__unixEpochGroupSeconds(\"timestamp\", 3600) as time,\n  sum(watt) as DailyWatts\n  FROM pac\n  GROUP BY time\n  ORDER BY time",
+                    "refId": "A",
+                    "timeColumns": [
+                        "time",
+                        "ts"
+                    ]
+                }
+            ],
+            "title": "Power (AC)",
+            "type": "timeseries"
+        }
+    ],
+    "schemaVersion": 37,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+        "list": []
+    },
+    "time": {
+        "from": "now-7d",
+        "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "GrowattDashboard",
+    "uid": "rEKBde7Vm",
+    "version": 1,
+    "weekStart": ""
+}

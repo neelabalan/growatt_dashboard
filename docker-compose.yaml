@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  # data_collector:
+  #   build:
+  #     context: ./
+  #   volumes:
+  #     - ./data:/opt/growatt_dashboard/data
+
+  grafana:
+    image: grafana/grafana:9.2.4
+    ports:
+      - 4000:3000
+    volumes:
+      - './grafana_config/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml'
+      - './grafana_config/dashboard.yml:/etc/grafana/provisioning/dashboards/dashboard.yml'
+      - './grafana_config/dashboards/dashboard.json:/app/dashboards/dashboard.json'
+      - './grafana_config/grafana.ini:/etc/grafana/grafana.ini'
+      - './data:/app/data'
+    environment:
+      - GF_INSTALL_PLUGINS=frser-sqlite-datasource

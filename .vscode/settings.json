@@ -1,0 +1,11 @@
+{
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.sortImports": true
+    },
+    "isort.args": [
+        "-sl",
+        "--profile=black"
+    ],
+}
