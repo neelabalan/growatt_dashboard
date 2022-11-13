@@ -155,7 +155,7 @@
                     ]
                 }
             ],
-            "title": "Day Average",
+            "title": "Max",
             "type": "stat"
         },
         {
